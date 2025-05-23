@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interlocutor — Розмовна практика мов за допомогою ШІ</title>
+  <meta name="description" content="Interlocutor — інноваційний застосунок для практики розмовних навичок з унікальним віртуальним співрозмовником на основі штучного інтелекту."/>
+  <link rel="icon" href="/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(120deg, #f7e7fe 0%, #e0f2fe 100%);
+      min-height: 100vh;
+      color: #24223e;
+    }
+    .container {
+      max-width: 820px;
+      margin: 40px auto;
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 8px 32px rgba(60,20,150,0.09);
+      border-radius: 20px;
+      padding: 42px 32px 32px 32px;
+      position: relative;
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .logo-img {
+      width: 70px;
+      height: 70px;
+      margin-right: 18px;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(80,60,180,0.12);
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 0.6em;
+      letter-spacing: 0.01em;
+      color: #7126dc;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.22rem;
+      text-align: center;
+      margin-bottom: 18px;
+      color: #3b2577;
+      font-weight: 500;
+    }
+    .features {
+      margin: 32px 0 22px 0;
+      display: grid;
+      gap: 26px;
+    }
+    .feature {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      background: #f2edff;
+      border-radius: 12px;
+      padding: 16px 18px;
+      box-shadow: 0 2px 10px rgba(120,70,220,0.05);
+      font-size: 1.08rem;
+    }
+    .feature-emoji {
+      font-size: 2rem;
+      margin-right: 8px;
+      user-select: none;
+    }
+    .status-list {
+      margin: 30px 0 15px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+    .status-list li {
+      position: relative;
+      padding-left: 32px;
+      font-size: 1.05rem;
+    }
+    .status-list li:before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      font-size: 1.15em;
+    }
+    .links {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .app-link {
+      display: inline-block;
+      margin: 0 8px;
+      padding: 11px 28px;
+      background: linear-gradient(90deg, #6e40c9 0%, #4eb6e6 100%);
+      color: #fff;
+      font-weight: 700;
+      border-radius: 12px;
+      font-size: 1.12rem;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      box-shadow: 0 2px 16px rgba(84,65,204,0.11);
+      transition: background 0.15s, box-shadow 0.12s;
+    }
+    .app-link:hover {
+      background: linear-gradient(90deg, #7126dc 0%, #1e7bb2 100%);
+      box-shadow: 0 4px 24px rgba(84,65,204,0.14);
+    }
+    .article-link {
+      display: inline-block;
+      margin-top: 13px;
+      color: #7126dc;
+      font-weight: 600;
+      text-decoration: underline;
+      font-size: 1rem;
+      transition: color 0.12s;
+    }
+    .article-link:hover {
+      color: #3b2577;
+    }
+    .footer {
+      text-align: center;
+      color: #6a6a8c;
+      margin-top: 38px;
+      font-size: 0.99rem;
+      opacity: 0.88;
+    }
+    @media (max-width: 580px) {
+      .container {
+        max-width: 98vw;
+        padding: 10vw 2vw 5vw 2vw;
+      }
+      .logo-img {
+        width: 52px;
+        height: 52px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="/logo512.png" alt="Interlocutor Logo" class="logo-img" />
+      <span style="font-size:2rem;font-weight:800;color:#7126dc;letter-spacing:1px;">Interlocutor</span>
+    </div>
+    <h1>Розмовна практика мов за допомогою ШІ</h1>
+    <div class="subtitle">
+      Інноваційний застосунок для мігрантів та всіх, хто хоче впевнено говорити іноземною мовою.<br>
+      <span style="color:#4eb6e6;font-weight:600;">Ваша розмова — ваш новий досвід!</span>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <span class="feature-emoji">🤖</span>
+        <div>
+          <b>Унікальний віртуальний співрозмовник</b><br>
+          Кожна розмова — новий AI-персонаж з власною історією та стилем спілкування.
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-emoji">💬</span>
+        <div>
+          <b>Інтерактивні діалоги</b><br>
+          Практикуйте сценарії з реального життя та готуйтеся до усних іспитів.
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-emoji">📝</span>
+        <div>
+          <b>Граматичні підказки</b><br>
+          Застосунок автоматично підсвічує помилки у мовленні та допомагає їх виправити.
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-emoji">🌍</span>
+        <div>
+          <b>Багатомовність</b><br>
+          Доступно німецькою, французькою, англійською та іншими мовами.
+        </div>
+      </div>
+    </div>
+
+    <ul class="status-list">
+      <li>Готовий основний функціонал — інтерактивна розмовна практика</li>
+      <li>Розроблено модуль граматичних підказок</li>
+      <li>Підтримуються різні мови</li>
+      <li>Опубліковано в Google Play</li>
+      <li>Є публікації про проєкт</li>
+    </ul>
+
+    <div class="links">
+      <a href="https://play.google.com/store/apps/details?id=com.interlocutor&pcampaignid=web_share" class="app-link" target="_blank" rel="noopener">Завантажити у Google Play</a>
+      <br/>
+      <a href="https://rubryka.com/en/2024/09/06/v-ukrayini-stvoryly-zastosunok-dlya-vyvchennya-mov-za-dopomogoyu-shi-yak-pratsyuye-tse-rishennya/?fbclid=IwY2xjawH9lLRleHRuA2FlbQIxMAABHUWdXpjdMHWxUlkPnzcc8CHXuahqstM96Ue3LCmkC8E6rjk5h4ddtPjBsw_aem_JVOIcdcTmpb2EQ7Z5FoFEw" class="article-link" target="_blank" rel="noopener">
+        Читати про нас у медіа →
+      </a>
+    </div>
+
+    <div class="footer">
+      © 2025 Interlocutor<br>
+      Якщо ви мігрант або просто хочете покращити свої розмовні навички — спробуйте Interlocutor і поділіться враженнями!
+    </div>
+  </div>
+</body>
+</html>
