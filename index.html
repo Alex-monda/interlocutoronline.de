@@ -8,30 +8,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://interlocutoronline.de/">
-  <!-- Здесь можно добавить стили для модальных окон -->
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
-    .container { max-width: 800px; margin: 0 auto; padding: 40px 20px 20px 20px; }
-    h1 { color: #2d387c; }
-    .buttons { margin: 30px 0; }
-    .btn {
-      background-color: #2d387c; color: #fff; border: none; padding: 15px 30px; margin: 10px; cursor: pointer;
-      border-radius: 6px; font-size: 1.1em;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      background: url('fon1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
     }
-    /* Модальные окна */
-    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%;
-      overflow: auto; background-color: rgba(0,0,0,0.4); }
-    .modal-content { background: #fff; margin: 10% auto; padding: 30px; border-radius: 10px; width: 95%; max-width: 600px; position: relative; }
-    .close { color: #2d387c; position: absolute; top: 10px; right: 20px; font-size: 30px; font-weight: bold; cursor: pointer; }
-    @media (max-width:600px){ .container{padding:10px;} .modal-content{padding:15px;} }
+    .overlay {
+      background: rgba(255,255,255,0.87);
+      min-height: 100vh;
+      width: 100%;
+      position: absolute;
+      top: 0; left: 0;
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 20px 24px 20px;
+      z-index: 1;
+      text-align: center;
+    }
+    .logo {
+      width: 110px;
+      margin: 0 auto 14px auto;
+      display: block;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(45,56,124,0.11);
+    }
+    h1 {
+      color: #2d387c;
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 2.2em;
+    }
+    .subtitle {
+      font-size: 1.15em;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .buttons { margin: 32px 0 10px 0; }
+    .btn {
+      background-color: #2d387c;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      margin: 10px 8px;
+      cursor: pointer;
+      border-radius: 7px;
+      font-size: 1.1em;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #4657b5; }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background: #fff;
+      margin: 5% auto;
+      padding: 32px 24px 24px 24px;
+      border-radius: 14px;
+      width: 97%; max-width: 610px;
+      position: relative;
+      box-shadow: 0 4px 28px rgba(45,56,124,0.13);
+      text-align: left;
+      font-size: 1.08em;
+    }
+    .modal-content h2 {
+      color: #2d387c;
+      margin-top: 0;
+    }
+    .close {
+      color: #2d387c;
+      position: absolute;
+      top: 16px;
+      right: 28px;
+      font-size: 32px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    ul { margin-top: 0; }
+    @media (max-width:600px){
+      .container{padding:12px;}
+      .modal-content{padding:14px;}
+      .subtitle{font-size: 1em;}
+    }
   </style>
 </head>
 <body>
+  <div class="overlay"></div>
   <div class="container">
+    <img src="logo_go.jpg" alt="Interlocutor logo" class="logo">
     <h1>Собеседник (Interlocutor)</h1>
-    <p>
-      Виртуальный AI-собеседник для мигрантов и специалистов. Практика разговорного немецкого, подготовка к экзаменам, освоение профессиональной терминологии. Реальные решения для языковой интеграции в Германии.
-    </p>
+    <div class="subtitle">
+      Виртуальный AI-собеседник для мигрантов и специалистов.<br>
+      Практика разговорного немецкого, подготовка к экзаменам, освоение профессиональной терминологии.
+      <br><b>Реальные решения для языковой интеграции в Германии.</b>
+    </div>
     <div class="buttons">
       <button class="btn" onclick="openModal('how')">Как это работает</button>
       <button class="btn" onclick="openModal('profi')">Профессиональный немецкий</button>
@@ -46,43 +129,113 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('how')">&times;</span>
       <h2>Как это работает</h2>
-      <p>Здесь будет описание работы приложения...</p>
+      <p>
+        <b>«Собеседник»</b> — это ваш персональный виртуальный партнёр для практики разговорного немецкого языка.<br>
+        Приложение основано на искусственном интеллекте и создано для того, чтобы вы могли уверенно чувствовать себя в реальных ситуациях — от быта до профессиональной среды.
+      </p>
+      <ul>
+        <li><b>Живое общение:</b> Диалоги на актуальные жизненные и профессиональные темы.</li>
+        <li><b>Исправление ошибок:</b> Мгновенная обратная связь по грамматике, произношению и лексике.</li>
+        <li><b>Гибкость:</b> Выбор тем — подготовка к экзамену, бытовая речь, профессиональные ситуации.</li>
+        <li><b>Мультиязычность:</b> Поддержка немецкого, английского, украинского и других европейских языков.</li>
+        <li><b>Доступность:</b> Практика в любое время — дома, на работе, в дороге.</li>
+      </ul>
+      <p>
+        <b>«Собеседник» — это уверенный старт для реальных разговоров в Германии!</b>
+      </p>
     </div>
   </div>
   <div id="modal-profi" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('profi')">&times;</span>
       <h2>Профессиональный немецкий</h2>
-      <p>Здесь будет информация о модуле профессиональной терминологии...</p>
+      <p>
+        Для успешной работы и учёбы важно быстро осваивать профессиональные термины.<br>
+        В <b>«Собеседнике»</b> доступен специальный модуль для изучения лексики по направлениям:
+      </p>
+      <ul>
+        <li>Бухгалтерия и финансы</li>
+        <li>Логистика и склад</li>
+        <li>Медицина и уход</li>
+        <li>IT и инженерия</li>
+        <li>Обслуживание, торговля и др.</li>
+      </ul>
+      <p>
+        <b>Что доступно:</b>
+      </p>
+      <ul>
+        <li>Ключевые фразы и выражения в формате аудиоциклов (на родном и немецком языках)</li>
+        <li>Тематические диалоги и ситуации для подготовки к собеседованиям</li>
+        <li>Возможность слушать, повторять и закреплять терминологию</li>
+      </ul>
+      <p>
+        Это поможет быстрее войти в новую профессиональную среду и успешно пройти интеграцию!
+      </p>
     </div>
   </div>
   <div id="modal-integration" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('integration')">&times;</span>
       <h2>Интеграция и опыт</h2>
-      <p>Здесь твоя история интеграции и зачем нужен сервис...</p>
+      <p>
+        Меня зовут Олексий Монда, я — украинский разработчик, инженер и предприниматель. <br>
+        Из-за войны мне пришлось покинуть родину и начать всё с нуля в Германии. Как и тысячи других людей, я прошёл путь интеграционных курсов, профессионального обучения и постоянной адаптации к новой языковой и культурной среде.
+      </p>
+      <p>
+        На своём опыте я убедился — одних языковых курсов мало. Практика с живым собеседником, поддержка и уверенность в своих силах важны не меньше. Именно поэтому я создал <b>«Собеседник»</b> — чтобы помочь другим пройти этот путь легче и быстрее.
+      </p>
+      <ul>
+        <li>Реальная практика</li>
+        <li>Поддержка и обратная связь</li>
+        <li>Подготовка к экзаменам, работе, реальным собеседованиям</li>
+      </ul>
+      <p>
+        Присоединяйтесь — и шаг за шагом интеграция станет проще!
+      </p>
     </div>
   </div>
   <div id="modal-faq" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('faq')">&times;</span>
-      <h2>FAQ</h2>
-      <p>Здесь будут часто задаваемые вопросы...</p>
+      <h2>FAQ — часто задаваемые вопросы</h2>
+      <ul>
+        <li><b>Для кого подходит приложение?</b><br>
+          Для всех, кто хочет быстро и эффективно освоить разговорный немецкий для жизни и работы в Германии: мигрантов, студентов, специалистов.</li>
+        <li><b>Можно ли использовать на телефоне?</b><br>
+          Да, приложение адаптировано под мобильные устройства и доступно 24/7.</li>
+        <li><b>В чём отличие от обычных курсов?</b><br>
+          Здесь вы получаете реальную практику разговора, мгновенную коррекцию ошибок, профессиональные диалоги и поддержку на всех этапах интеграции.</li>
+        <li><b>Как часто нужно заниматься?</b><br>
+          Регулярная практика — залог успеха! Рекомендуем выделять хотя бы 15–20 минут в день.</li>
+        <li><b>Какие языки поддерживаются?</b><br>
+          Немецкий, английский, украинский и другие европейские языки.</li>
+      </ul>
     </div>
   </div>
   <div id="modal-about" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('about')">&times;</span>
       <h2>О разработчике</h2>
-      <p>Здесь твоя история и контакты...</p>
+      <p>
+        <b>Олексий Монда</b> — разработчик, инженер, предприниматель.<br>
+        Родом из Украины, опыт работы более 15 лет в IT, запуск собственных сервисов и продуктов.<br>
+        Пережил переезд, интеграцию в Германию, знает все сложности языкового и профессионального пути.<br>
+        <br>
+        <b>Контакты:</b>
+        <ul>
+          <li>Email: <a href="mailto:mondalex@gmail.com">mondalex@gmail.com</a></li>
+          <li>GitHub: <a href="https://github.com/Alex-monda" target="_blank">Alex-monda</a></li>
+        </ul>
+      </p>
+      <p>
+        <i>«Я верю, что практическая поддержка и современные технологии могут реально облегчить интеграцию. Добро пожаловать в «Собеседник»!»</i>
+      </p>
     </div>
   </div>
 
-  <!-- JS для открытия/закрытия окон -->
   <script>
     function openModal(id) { document.getElementById('modal-' + id).style.display = 'block'; }
     function closeModal(id) { document.getElementById('modal-' + id).style.display = 'none'; }
-    // Закрытие по клику вне окна
     window.onclick = function(event) {
       ['how','profi','integration','faq','about'].forEach(function(id){
         var modal = document.getElementById('modal-'+id);
