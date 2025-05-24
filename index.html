@@ -109,20 +109,10 @@
       cursor: pointer;
     }
     ul { margin-top: 0; }
-    /* Счетчик по центру, стиль можно изменить */
-    .simple-counter {
-      margin: 36px auto 0 auto;
-      display: block;
-      font-size: 1.25em;
-      color: #2d387c;
-      font-weight: bold;
-      width: fit-content;
-    }
     @media (max-width:600px){
       .container{padding:12px;}
       .modal-content{padding:14px;}
       .subtitle{font-size: 1em;}
-      .simple-counter{margin: 20px auto 0 auto;}
     }
   </style>
 </head>
@@ -142,22 +132,8 @@
       <button class="btn" onclick="openModal('integration')">Интеграция и опыт</button>
       <button class="btn" onclick="openModal('faq')">FAQ</button>
       <button class="btn" onclick="openModal('about')">О разработчике</button>
+      <a href="https://play.google.com/store/apps/details?id=com.interlocutoronline.app" target="_blank" class="btn" style="text-decoration:none; display:inline-block;">Скачать приложение</a>
     </div>
-    <!-- Текстовый счетчик посещений (SimpleCounter) -->
-    <span id="sc-count" class="simple-counter"></span>
-    <script type="text/javascript" src="https://simplecounter.pro/count.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        function showCount() {
-          if(typeof window.sc_count === 'number') {
-            document.getElementById('sc-count').textContent = 'Посещений: ' + window.sc_count;
-          } else {
-            setTimeout(showCount, 100);
-          }
-        }
-        showCount();
-      });
-    </script>
   </div>
 
   <!-- Модальные окна -->
