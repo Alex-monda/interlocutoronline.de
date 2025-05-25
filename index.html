@@ -17,21 +17,15 @@
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- Google tag (gtag.js) — новый счетчик Google Analytics 4 -->
+  <!-- Google tag (gtag.js) — GA4 + Google Ads (оба счетчика подключены правильно) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMFCVB4MMD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    // Google Analytics 4
     gtag('config', 'G-PMFCVB4MMD');
-  </script>
-
-  <!-- Google tag (gtag.js) — старый код Google Ads (оставляем для совместимости, если нужно) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17113187152"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    // Google Ads (если нужно)
     gtag('config', 'AW-17113187152');
   </script>
 
