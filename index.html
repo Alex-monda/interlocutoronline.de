@@ -3,19 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Собеседник (Interlocutor) — языковая интеграция и разговорная практика в Германии</title>
-  <meta name="description" content="Реальные решения для языковой интеграции в Германии: виртуальный собеседник для практик�[...]
-  <meta name="keywords" content="языковая интеграция, собеседник, Interlocutor, немецкий язык, разговорная практика, мигрантам в Г[...]
+  <meta name="description" content="Реальные решения для языковой интеграции в Германии: виртуальный собеседник для практики разговорного немецкого языка, подготовка к экзаменам, освоение профессиональной терминологии.">
+  <meta name="keywords" content="языковая интеграция, собеседник, Interlocutor, немецкий язык, разговорная практика, мигрантам в Германии, AI, подготовка к экзаменам">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://interlocutoronline.de/">
+  <!-- OpenGraph для соцсетей -->
+  <meta property="og:title" content="Собеседник (Interlocutor) — языковая интеграция и разговорная практика в Германии">
+  <meta property="og:description" content="Виртуальный AI-собеседник для мигрантов и специалистов. Практика разговорного немецкого, подготовка к экзаменам, освоение терминологии.">
+  <meta property="og:image" content="https://interlocutoronline.de/logo_go.jpg">
+  <meta property="og:url" content="https://interlocutoronline.de/">
+  <meta property="og:type" content="website">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) — новый счетчик Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMFCVB4MMD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PMFCVB4MMD');
+  </script>
+
+  <!-- Google tag (gtag.js) — старый код Google Ads (оставляем для совместимости, если нужно) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17113187152"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-17113187152');
   </script>
 
@@ -73,6 +89,8 @@
       border-radius: 7px;
       font-size: 1.1em;
       transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
     }
     .btn:hover { background: #4657b5; }
     .modal {
@@ -132,7 +150,7 @@
       <button class="btn" onclick="openModal('integration')">Интеграция и опыт</button>
       <button class="btn" onclick="openModal('faq')">FAQ</button>
       <button class="btn" onclick="openModal('about')">О разработчике</button>
-      <a href="https://play.google.com/store/apps/details?id=com.interlocutor" target="_blank" class="btn" style="text-decoration:none; display:inline-block;">Скачать приложение</a>
+      <a href="https://play.google.com/store/apps/details?id=com.interlocutor" target="_blank" class="btn">Скачать приложение</a>
     </div>
   </div>
 
