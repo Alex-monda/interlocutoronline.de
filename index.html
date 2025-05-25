@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title data-i18n="title">Собеседник (Interlocutor) — языковая интеграция и разговорная практика в Германии</title>
-  <meta name="description" content="Реальные решения для языковой интеграции в Германии: виртуальный собеседник для практики разговорного немецкого языка и профессиональной лексики для мигрантов и специалистов.">
+  <meta name="description" content="Реальные решения для языковой интеграции в Германии: виртуальный собеседник для практик...">
   <meta name="keywords" content="языковая интеграция, собеседник, Interlocutor, немецкий язык, разговорная практика, мигрантам в Германии, экзамены, профессиональный немецкий">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index,follow">
@@ -144,7 +144,7 @@
       </select>
     </div>
     <div class="buttons">
-      <button class="btn" data-i18n="btn_download" onclick="window.open('https://play.google.com/store/apps/details?id=com.interlocutor','_blank')"></button>
+      <button class="btn" data-i18n="btn_download" onclick="trackDownloadAndGo()"></button>
       <button class="btn" onclick="openModal('how')" data-i18n="menu_how"></button>
       <button class="btn" onclick="openModal('profi')" data-i18n="menu_profi"></button>
       <button class="btn" onclick="openModal('integration')" data-i18n="menu_integration"></button>
@@ -242,6 +242,18 @@
         var modal = document.getElementById('modal-'+id);
         if (event.target == modal) modal.style.display = "none";
       });
+    }
+
+    // Отслеживание клика по кнопке "Скачать с Google Play"
+    function trackDownloadAndGo() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'download_app', {
+          'event_category': 'engagement',
+          'event_label': 'GooglePlay',
+          'value': 1
+        });
+      }
+      window.open('https://play.google.com/store/apps/details?id=com.interlocutor','_blank');
     }
   </script>
 </body>
