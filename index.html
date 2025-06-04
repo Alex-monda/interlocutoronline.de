@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title data-i18n="title">Собеседник (Interlocutor) — языковая интеграция и разговорная практика в Германии</title>
-  <meta name="description" content="Реальные решения для языковой интеграции в Германии: виртуальный собеседник для практик.">
-  <meta name="keywords" content="языковая интеграция, собеседник, Interlocutor, немецкий язык, разговорная практика, мигрантам в Германии">
+  <meta name="description" content="Реальные решения для языковой интеграции в Германии: виртуальный собеседник для практик...">
+  <meta name="keywords" content="языковая интеграция, собеседник, Interlocutor, немецкий язык, разговорная практика, мигрантам в Германии, экзамены, профессиональный немецкий">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://interlocutoronline.de/">
@@ -19,6 +19,10 @@
     gtag('config', 'AW-17113187152'); // Google Ads (если нужен)
   </script>
   <!-- /Google Analytics & Ads -->
+
+  <!-- Если требуется Search Console, добавьте сюда мета-тег подтверждения вида:
+  <meta name="google-site-verification" content="ВАШ-КОД">
+  -->
 
   <style>
     body {
@@ -146,7 +150,6 @@
       <button class="btn" onclick="openModal('integration')" data-i18n="menu_integration"></button>
       <button class="btn" onclick="openModal('faq')" data-i18n="menu_faq"></button>
       <button class="btn" onclick="openModal('about')" data-i18n="menu_about"></button>
-      <button class="btn" onclick="openModal('paperspell')" data-i18n="menu_paperspell"></button>
     </div>
   </div>
 
@@ -230,19 +233,12 @@
       <p><i data-i18n="modal_about_quote"></i></p>
     </div>
   </div>
-  <div id="modal-paperspell" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('paperspell')">&times;</span>
-      <h2 data-i18n="modal_paperspell_title"></h2>
-      <div data-i18n="modal_paperspell_text" data-i18n-html></div>
-    </div>
-  </div>
 
   <script>
     function openModal(id) { document.getElementById('modal-' + id).style.display = 'block'; }
     function closeModal(id) { document.getElementById('modal-' + id).style.display = 'none'; }
     window.onclick = function(event) {
-      ['how','profi','integration','faq','about','paperspell'].forEach(function(id){
+      ['how','profi','integration','faq','about'].forEach(function(id){
         var modal = document.getElementById('modal-'+id);
         if (event.target == modal) modal.style.display = "none";
       });
