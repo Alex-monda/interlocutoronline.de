@@ -26,13 +26,15 @@ function setLang(lang) {
   document.getElementById('language-select').value = lang;
 
   // Грузим английский — всегда как fallback
-  fetch('lang/en.json')
+  // Добавляем версию для предотвращения кэширования
+  const cacheBuster = '?v=' + new Date().getTime();
+  fetch('lang/en.json' + cacheBuster)
     .then(resp => resp.json())
     .then(enData => {
       translationsEn = enData;
       // Грузим основной язык
       if (lang !== 'en') {
-        fetch(`lang/${lang}.json`)
+        fetch(`lang/${lang}.json` + cacheBuster)
           .then(resp => resp.json())
           .then(data => {
             translations = data;
