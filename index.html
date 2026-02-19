@@ -253,16 +253,16 @@
       });
     }
 
-    // Отслеживание клика по кнопке "Скачать с Google Play"
+    // Отслеживание клика по кнопке "Открыть приложение"
     function trackDownloadAndGo() {
       if (typeof gtag === 'function') {
-        gtag('event', 'download_app', {
+        gtag('event', 'open_app', {
           'event_category': 'engagement',
-          'event_label': 'GooglePlay',
+          'event_label': 'Zusammenreden',
           'value': 1
         });
       }
-      window.open('https://play.google.com/store/apps/details?id=com.interlocutor','_blank');
+      window.location.href = 'https://zusammenreden.me/';
     }
   </script>
 </body>
